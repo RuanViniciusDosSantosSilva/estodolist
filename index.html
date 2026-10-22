@@ -1,87 +1,145 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>EsToDoList</title>
+  <meta charset="UTF-8">
+  <!--
+    ETAPA 2 - CELULAR (360px).
+    Estrutura original preservada.
+    Personalização apenas das cores.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EsToDoList</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-100 text-slate-800 min-h-screen">
-    <header class="bg-indigo-600 text-white">
-        <div class="max-w-5x1 mx-auto px-4 py-4 flex items-center justify-between">
-            <h1 class="text-xl font-bold">EsToDoList</h1>
-            <p class="hidden text-sm md:inline">Organize sua rotina escolar</p>
-        </div>
-    </header>
-    <main>
+<body class="bg-[#FFF7F7] text-[#56343A] min-h-screen">
 
-        <!-- Coluna 1: Criar, pesquisa e filtrar -->
-         <section>
-            <form>
-                <input type="text" placeholder="Nova Tarefa">
-                <input type="date">
-                <button>Adicionar</button>
-            </form>
-            <input type="text" placeholder="Pesquisar tarefa...">
-            <div>
-                <button>Todas</button>
-                <button>Pendentes</button>
-                <button>Concluídas</button>
-            </div>
-         </section>
-        <!-- Coluna 2: lista de tarefas -->
-         <section>
-            <ul>
-                <li>
-                    <label>
-                        <input type="checkbox">
-                        <span>
-                            <span>Trabalho de História</span>
-                            <span>20/10/2026</span>
-                        </span>
-                    </label>
-                    <div>
-                        <button>Editar</button>
-                        <button>Excluir</button>
-                    </div>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox">
-                        <span>
-                            <span>Estudar para a prova de Física</span>
-                            <span>22/10/2026</span>
-                        </span>
-                    </label>
-                    <div>
-                        <button>Editar</button>
-                        <button>Excluir</button>
-                    </div>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox">
-                        <span>
-                            <span>Apresentação de Geografia</span>
-                            <span>15/10/2026</span>
-                        </span>
-                    </label>
-                    <div>
-                        <button>Editar</button>
-                        <button>Excluir</button>
-                    </div>
-                </li>
-            </ul>
-            <p>2 Tarefas Pendentes</p>
-         </section>
+  <header class="bg-[#8F1D2C] text-white">
+    <div class="max-w-5xl mx-auto lg:max-w-full px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl sm:text-3xl font-bold">EsToDoList</h1>
+      <span class="hidden sm:block text-sm">Organize sua rotina escolar</span>
+    </div>
+  </header>
 
-    </main>
-    <footer>
+  <main class="max-w-5xl mx-auto lg:max-w-full px-4 py-6 grid grid-cols-1 lg:grid-cols-3  gap-6">
 
+    <!-- Coluna 1: criar, pesquisar e filtrar -->
+    <section class="bg-white rounded-xl shadow p-4 space-y-4">
+      <form class="flex flex-col sm:flex-row lg:flex-col gap-3 ">
+        <input
+          type="text"
+          placeholder="Nova tarefa"
+          class="border border-[#EAD9DD] rounded-lg px-3 py-3 sm:flex-grow lg: focus:outline-none focus:ring-2 focus:ring-[#D9364F]"
+        >
 
+        <input
+          type="date"
+          class="border border-[#EAD9DD] rounded-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-[#D9364F]"
+        >
 
-    </footer>
+        <button
+          type="submit"
+          class="bg-[#D9364F] text-white rounded-lg px-4 py-3 font-semibold hover:bg-[#B9253D]"
+        >
+          Adicionar
+        </button>
+      </form>
+
+      <input
+        type="search"
+        placeholder="Pesquisar tarefa..."
+        class="w-full border border-[#EAD9DD] rounded-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-[#D9364F]"
+      >
+
+      <div class="flex gap-2 overflow-x-auto">
+        <button class="px-4 py-3 rounded-full bg-[#D9364F] text-white whitespace-nowrap">
+          Todas
+        </button>
+
+        <button class="px-4 py-3 rounded-full bg-[#FCE8EC] text-[#8F1D2C] whitespace-nowrap">
+          Pendentes
+        </button>
+
+        <button class="px-4 py-3 rounded-full bg-[#FCE8EC] text-[#8F1D2C] whitespace-nowrap">
+          Concluídas
+        </button>
+      </div>
+    </section>
+
+    <!-- Coluna 2: lista de tarefas -->
+    <section class="lg:col-span-2">
+      <ul class="space-y-3">
+
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+          <label class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1 w-5 h-5 accent-[#D9364F]">
+
+            <span>
+              <span class="block font-medium">Trabalho de História</span>
+              <span class="text-sm text-[#8C7479]">20/10/2026</span>
+            </span>
+          </label>
+
+          <div class="flex gap-2">
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FFF0D6] text-[#805600]">
+              Editar
+            </button>
+
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FCE8EC] text-[#A51D32]">
+              Excluir
+            </button>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+          <label class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1 w-5 h-5 accent-[#D9364F]">
+
+            <span>
+              <span class="block font-medium">Estudar para a prova de Matemática</span>
+              <span class="text-sm text-[#8C7479]">22/10/2026</span>
+            </span>
+          </label>
+
+          <div class="flex gap-2">
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FFF0D6] text-[#805600]">
+              Editar
+            </button>
+
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FCE8EC] text-[#A51D32]">
+              Excluir
+            </button>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+          <label class="flex items-start gap-3">
+            <input type="checkbox" checked class="mt-1 w-5 h-5 accent-[#D9364F]">
+
+            <span>
+              <span class="block font-medium">Entregar projeto no GitHub</span>
+              <span class="text-sm text-[#8C7479]">08/10/2026</span>
+            </span>
+          </label>
+
+          <div class="flex gap-2">
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FFF0D6] text-[#805600]">
+              Editar
+            </button>
+
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FCE8EC] text-[#A51D32]">
+              Excluir
+            </button>
+          </div>
+        </li>
+
+      </ul>
+
+      <p class="mt-4 text-sm text-[#8C7479]">2 tarefas pendentes</p>
+    </section>
+
+  </main>
+
 </body>
-
 </html>
