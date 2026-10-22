@@ -25,12 +25,12 @@
   <main class="max-w-5xl mx-auto lg:max-w-full px-4 py-6 grid grid-cols-1 lg:grid-cols-3  gap-6">
 
     <!-- Coluna 1: criar, pesquisar e filtrar -->
-    <section class="bg-white rounded-xl shadow p-4 space-y-4">
+    <section class="bg-white rounded-xl shadow p-4 space-y-4 max-h-96 lg:sticky lg:top-6 lg:self-start">
       <form class="flex flex-col sm:flex-row lg:flex-col gap-3 ">
         <input
           type="text"
           placeholder="Nova tarefa"
-          class="border border-[#EAD9DD] rounded-lg px-3 py-3 sm:flex-grow lg: focus:outline-none focus:ring-2 focus:ring-[#D9364F]"
+          class="border border-[#EAD9DD] rounded-lg px-3 py-3 sm:flex-auto lg: focus:outline-none focus:ring-2 focus:ring-[#D9364F]"
         >
 
         <input
@@ -40,7 +40,8 @@
 
         <button
           type="submit"
-          class="bg-[#D9364F] text-white rounded-lg px-4 py-3 font-semibold hover:bg-[#B9253D]"
+          class="bg-[#D9364F] text-white rounded-lg px-4 py-3 font-semibold hover:bg-[#B9253D] transition
+          "
         >
           Adicionar
         </button>
@@ -71,12 +72,12 @@
     <section class="lg:col-span-2">
       <ul class="space-y-3">
 
-        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3 ">
           <label class="flex items-start gap-3">
             <input type="checkbox" class="mt-1 w-5 h-5 accent-[#D9364F]">
 
             <span>
-              <span class="block font-medium">Trabalho de História</span>
+              <span class="block font-medium line-through text-slate-950">Trabalho de História</span>
               <span class="text-sm text-[#8C7479]">20/10/2026</span>
             </span>
           </label>
@@ -133,6 +134,113 @@
             </button>
           </div>
         </li>
+
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+          <label class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1 w-5 h-5 accent-[#D9364F]">
+
+            <span>
+              <span class="block font-medium">Apresentação de Seminário</span>
+              <span class="text-sm text-[#8C7479]">20/10/2026</span>
+            </span>
+          </label>
+
+          <div class="flex gap-2">
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FFF0D6] text-[#805600]">
+              Editar
+            </button>
+
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FCE8EC] text-[#A51D32]">
+              Excluir
+            </button>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+          <label class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1 w-5 h-5 accent-[#D9364F]">
+
+            <span>
+              <span class="block font-medium">Atividade Interativa com o Quinto ano</span>
+              <span class="text-sm text-[#8C7479]">20/10/2026</span>
+            </span>
+          </label>
+
+          <div class="flex gap-2">
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FFF0D6] text-[#805600]">
+              Editar
+            </button>
+
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FCE8EC] text-[#A51D32]">
+              Excluir
+            </button>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+          <label class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1 w-5 h-5 accent-[#D9364F]">
+
+            <span>
+              <span class="block font-medium">Interclasse de volei</span>
+              <span class="text-sm text-[#8C7479]">20/10/2026</span>
+            </span>
+          </label>
+
+          <div class="flex gap-2">
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FFF0D6] text-[#805600]">
+              Editar
+            </button>
+
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FCE8EC] text-[#A51D32]">
+              Excluir
+            </button>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+          <label class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1 w-5 h-5 accent-[#D9364F]">
+
+            <span>
+              <span class="block font-medium">Entregar Matrícula</span>
+              <span class="text-sm text-[#8C7479]">20/10/2026</span>
+            </span>
+          </label>
+
+          <div class="flex gap-2">
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FFF0D6] text-[#805600]">
+              Editar
+            </button>
+
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FCE8EC] text-[#A51D32]">
+              Excluir
+            </button>
+          </div>
+        </li>
+
+        <li class="bg-white rounded-xl shadow p-4 flex flex-col md:flex-row md:justify-between gap-3">
+          <label class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1 w-5 h-5 accent-[#D9364F]">
+
+            <span>
+              <span class="block font-medium">Tirar duvida com a Mayara</span>
+              <span class="text-sm text-[#8C7479]">20/10/2026</span>
+            </span>
+          </label>
+
+          <div class="flex gap-2">
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FFF0D6] text-[#805600]">
+              Editar
+            </button>
+
+            <button class="flex-1 px-4 py-3 rounded-lg bg-[#FCE8EC] text-[#A51D32]">
+              Excluir
+            </button>
+          </div>
+        </li>
+
+        
 
       </ul>
 
